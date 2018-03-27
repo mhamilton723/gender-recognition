@@ -13,7 +13,7 @@ Type "terminal" in the finder and you should be able to pop up a window. See [Be
 
 Unfortunately you'll have to deal with powershell. If you are feeling ambitious, you can create a linux virtual machine using [this guide](https://www.windowscentral.com/how-run-linux-distros-windows-10-using-hyper-v) If virtual machines sound like too much, just type "powershell" into the search bar and you should boot up a terminal. See [this very small guide](https://wiki.communitydata.cc/Windows_terminal_navigation) for some basic usage.
 
-## Linux
+### Linux
 If you are using ubuntu, search for the terminal app just like on a mac. See the mac guide for usage tips.
 
 ## Getting Started
@@ -39,7 +39,7 @@ If you have an older version of python. Go grab yourself [Anaconda 3.6](https://
 
 **After install you need to close your terminal and re-open it to make sure it picks up on the newly installed python**
 
-### 2. Download this project
+### 2. Download the Project
 
 To grab a copy of this project fire up the terminal, navigate (within the terminal) to a location that you would like to hold this project (like the Documents folder or something therein)
 
@@ -59,7 +59,7 @@ You can now navigate to the main code of the repositoty by navigating to the **s
 cd gender-recognition/src
 ```
 
-### 3. Install the dependencies
+### 3. Install Dependencies
 
 To install the dependencies for the project you must first decide whether you would like to use the GPU enabled version, or the CPU-only version. GPU support dramatically speeds training time (10x - 50x), but is only available if you have a GPU and download special software from NVIDIA. If you are feeling ambitious you can follow this [guide to set up tensorflow with GPU support](https://www.tensorflow.org/install/). **IF AND ONLY IF** you have installed GPU enabled tensorflow run the following in the `gender-recognition` directory
 
@@ -73,7 +73,7 @@ pip install -r ./requirements.txt
 ```
 
 
-### 4. Running the Code
+### 4. Run the Code
  Make sure your terminal is inside of the source folder. `pwd` Should yield something akin to (on windows)
  
  ```bash
@@ -135,10 +135,21 @@ TensorBoard 0.4.0 at http://5147322-0829:6006 (Press CTRL+C to quit)
 Now copy paste the url, in this case `http://5147322-0829:6006` and check out your model in action. 
 
 
-### Downloading Trained Models and Logs
+## Downloading Trained Models and Logs
 
 If you cannot get the above working follow these steps to download copies of the tensorboard logs and the final trained model
 
-### Explore 
+## Explore 
 
-This is a simple network, feel free to play with the hyper-parameters, add more dropout, change the number of layers, add regularization, change the activation function, etc. Go wild. 
+This is a simple network, feel free to
+   - Explore the hyper parameter space
+   - Add more dropout
+   - Change the number and size of layers
+   - Add regularization
+   - Change the activation function (maybe try SELU)
+   - Change the dataset to your favorite classification problem ([These are fun](https://github.com/junyanz/CycleGAN#datasets))
+   - Go wild
+
+## Contributing
+
+This is an open source project and contributions are welcome. To contribute, fork this project and take out a PR. If you used this project or found it helpful, drop me an email and let me know!
