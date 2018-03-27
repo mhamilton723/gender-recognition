@@ -1,4 +1,4 @@
-# Deep learning for Image Classification
+# Deep Learning for Image Classification
 
 In this repository you will find some simple code for how to train your own deep image classifier. In our example we will train a network to discern gender from the [Labelled Faces in the Wild dataset](http://vis-www.cs.umass.edu/lfw/).
 
