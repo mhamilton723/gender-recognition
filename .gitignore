@@ -1,0 +1,6 @@
+data
+logs
+saved_models
+checkpoints
+.idea
+src/__pycache__
