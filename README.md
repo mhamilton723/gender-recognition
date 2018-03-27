@@ -48,7 +48,7 @@ You can check that you are in your location of choice by using the `pwd` command
 Now you can "clone" the project using git. 
 
 ```bash
-git clone FILLTHISIN
+git clone https://github.com/mhamilton723/gender-recognition.git
 ```
 
 This will pull the source code onto your computer. If you do not have git, install it by following [this guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
