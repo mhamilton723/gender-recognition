@@ -50,4 +50,7 @@ def install_data_if_not_exists():
     else:
         print("Found data, skipping download")
 
-    unzip(join(data_dir, zip_file_name), data_dir)
+    if not exists(join(data_dir, "clean_lfw")):
+        unzip(join(data_dir, zip_file_name), data_dir)
+    else:
+        print("Found data, skipping unzip")
