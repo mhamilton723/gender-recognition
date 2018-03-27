@@ -4,7 +4,7 @@ In this repository you will find some simple code for how to train your own deep
 
 The goal of this code is to provide clear examples of how one can create and visualize a complex network with only a few lines of code. This project is intended for academic use.
 
-## How to run commands on your system
+## How to Use the Command Line
 
 ### Mac
 Type "terminal" in the finder and you should be able to pop up a window. See [Beginner Guide To Terminal Usage](https://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything) for more details.
