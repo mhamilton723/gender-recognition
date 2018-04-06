@@ -54,3 +54,6 @@ def install_data_if_not_exists():
         unzip(join(data_dir, zip_file_name), data_dir)
     else:
         print("Found data, skipping unzip")
+
+if __name__ == '__main__':
+    install_data_if_not_exists()

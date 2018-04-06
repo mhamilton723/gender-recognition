@@ -7,6 +7,5 @@ dependencies:
 - requests
 - keras
 - pip
-- tensorflow
-- pip:
-  - PIL
+- tensorflow-gpu
+- pillow
