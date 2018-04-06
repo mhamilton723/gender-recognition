@@ -1,0 +1,12 @@
+name: deep-learning-env
+dependencies:
+- python=3.5
+- numpy
+- gevent
+- flask
+- requests
+- keras
+- pip
+- tensorflow
+- pip:
+  - PIL

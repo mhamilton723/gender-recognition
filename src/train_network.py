@@ -12,13 +12,13 @@ from keras.callbacks import ModelCheckpoint
 from src.visualization import CustomTensorboard, convKernelSummary, convActivationSummary
 from src.get_data import install_data_if_not_exists, make_if_not_exisits
 
-#this will automatically install the data if none exists,
+# this will automatically install the data if none exists,
 # if you need to re-install this data delete the data folder
 install_data_if_not_exists()
 
 # Tunable Parameters
 img_width, img_height = 128, 128          # What dimensions to resize the input images to
-name = "run_1"                        # What to name the checkpoints and logs
+name = "run_2"                            # What to name the checkpoints and logs
 batch_size = 128                          # The size of the minibatches
 nb_train_samples = batch_size * 20        # The number of training samples per epoch
 nb_validation_samples = batch_size * 10   # The number of validation samples per epoch
@@ -86,6 +86,9 @@ train_datagen = ImageDataGenerator(
     rescale=1. / 255,
     shear_range=0.2,
     zoom_range=0.2,
+    rotation_range=10,
+    width_shift_range=.1,
+    height_shift_range=.1,
     horizontal_flip=True)
 
 # this is the augmentation configuration we will use for testing:
@@ -121,7 +124,13 @@ model.fit_generator(
     epochs=epochs,
     validation_data=validation_generator,
     validation_steps=nb_validation_samples // batch_size,
-    callbacks=[tb_viz, checkpoint])
+    callbacks=[tb_viz, checkpoint],
+    class_weight={0: 3.6, 1: 1.0}
+    # There are roughly 3.6x as many male faces in the dataset
+    # so up-weight the female faces (class 0)
+    # This will cut down on some of the network's
+    # bias towards predicting males.
+)
 
 print("Saving trained model weights")
-model.save_weights(join(saved_model_dir, "{}.h5".format(name)))
+model.save(join(saved_model_dir, "{}.h5".format(name)))

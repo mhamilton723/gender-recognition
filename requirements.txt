@@ -1,3 +1,0 @@
-requests
-keras>=2.1.4
-tensorflow>=1.4.0
